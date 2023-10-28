@@ -1,0 +1,2758 @@
+/*
+Theme Name: Supmax Child Theme
+Theme URI: http://shtheme.com/demosd/supmax
+Description: This is child theme of supmax
+Author: Shtheme
+Author URI: https://themeforest.net/user/shtheme
+Version: 1.0
+Text Domain:  supmax-child
+Template: supmax
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+:root {
+    --global-primary: #FF7F0E;
+    --global-secondary: #000;
+    --global-third: #FFF;
+    --global-forth: #7A7A7A;
+}
+
+
+.blog-list-thumb {
+    float: right;
+    max-width: 400px;
+    padding-left: 25px;
+}
+
+.woocommerce-input-wrapper {
+    width: 100%;
+}
+
+.woocommerce a.button.alt {
+    colour: var(--global-third);
+    background: var(--global-primary);
+}
+
+.woocommerce a.button.alt:hover {
+    colour: var(--global-third);
+    background: var(--global-secondary);
+}
+
+.cart-page-total .cart_totals .wc-proceed-to-checkout a:hover {
+    colour: var(--global-third);
+    background: var(--global-secondary);
+}
+
+footer a {
+    color: #FFF;
+}
+
+footer a:hover {
+    color: var(--global-primary);
+}
+
+.faq-wrapper .card-header h5 a {
+    color: var(--global-primary);
+}
+
+.faq-wrapper .card-header h5 a::after {
+    border: 3px solid var(--global-primary);
+    color: var(--global-primary);
+}
+
+.faq-wrapper .card-header h5 a.collapsed {
+    color: var(--global-secondary);
+}
+
+.single-blog-post:hover .blog-content h3 a {
+    color: var(--global-primary);
+}
+
+.blog-content > a {
+    color: var(--global-primary);
+}
+
+.blog-content a i {
+    color: var(--global-third);
+    background: var(--global-primary);
+}
+
+blockquote {
+    margin: 27px 0 30px;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    font-style: italic;
+    color: #362f3c;
+    padding-left: 90px;
+    position: relative;
+    padding-right: 30px;
+}
+
+blockquote p {
+    color: #362f3c;
+    font-size: 16px !important;
+    line-height: 28px !important;
+    font-weight: 600 !important;
+    font-style: italic;
+}
+
+.widget_calendar {
+    float: none;
+}
+
+#wp-calendar {
+    width: 100%;
+}
+
+#wp-calendar caption {
+    background: none repeat scroll 0 0 #E9E9E9;
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#wp-calendar thead {
+    font-size: 10px;
+}
+
+#wp-calendar thead th {
+    border: 1px solid #E9E9E9;
+    font-size: 13px;
+    padding: 8px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#wp-calendar tbody {
+    color: #aaa;
+}
+
+#wp-calendar tbody td {
+    background: #f5f5f5;
+    border: 1px solid #E9E9E9;
+    text-align: center;
+    padding: 8px;
+}
+
+#wp-calendar tbody td#today {
+    background: #16A085;
+    color: #fff;
+}
+
+#wp-calendar tbody td#today a {
+    color: #fff;
+}
+
+#wp-calendar tbody td:hover {
+    background: #fff;
+}
+
+#wp-calendar tbody .pad {
+    background: none;
+}
+
+#wp-calendar tfoot {
+    border: 1px solid #E9E9E9;
+}
+
+#wp-calendar tfoot #next {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #83c99f;
+}
+
+#wp-calendar tfoot #prev {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    color: #83c99f;
+}
+
+.widget select {
+    max-width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.widget_text .textwidget img {
+    max-width: 100%;
+    height: auto;
+}
+
+.widget_text select, .widget_text input, .widget_text textarea {
+    max-width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.widget_text option {
+    max-width: 100%;
+}
+
+.widget_nav_menu ul li, .widget_pages ul li {
+    color: #827b7d;
+    line-height: 28px;
+}
+
+.widget_nav_menu ul li ul, .widget_pages ul li ul {
+    padding-left: 15px;
+}
+
+.widget_nav_menu ul li a, .widget_pages ul li a {
+    color: #827b7d;
+}
+
+.widget_nav_menu ul li a:hover, .widget_pages ul li a:hover {
+    color: #615C5C;
+}
+
+#sidebar .textwidget img {
+    max-width: 100%;
+}
+
+.wp-caption {
+    max-width: 100%;
+}
+
+.wp-caption img {
+    padding-bottom: 5px;
+}
+
+.form-submit input.submit_btn {
+    display: inline-block;
+    width: auto;
+    color: #fff;
+    margin-top: 30px;
+    margin-left: 6px;
+}
+
+.form-submit input.submit_btn:hover {
+    color: #bfa373;
+}
+
+.screen-reader-text {
+    color: #777;
+}
+
+/* add */
+
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+
+.single-content table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0 0 1.75em;
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+}
+
+.single-content table td {
+    border: 1px solid #d1d1d1;
+    padding-left: 7px;
+}
+
+.single-content table th {
+    border: 1px solid #d1d1d1;
+    padding-left: 7px;
+}
+
+img.alignleft, .alignleft img {
+    margin-right: 10px;
+}
+
+img.alignright, .alignright img {
+    margin-left: 10px;
+}
+
+.comment_text table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0 0 1.75em;
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+}
+
+.comment_text table td {
+    border: 1px solid #d1d1d1;
+    padding-left: 7px;
+}
+
+.comment_text table th {
+    border: 1px solid #d1d1d1;
+    padding-left: 7px;
+}
+
+.single-content li {
+    padding: 0 !important;
+    list-style: inherit !important;
+}
+
+.single-content ul {
+    list-style: disc !important;
+    padding-left: 20px !important;
+}
+
+.single-content ol {
+    list-style: decimal !important;
+    padding-left: 20px !important;
+}
+
+.comment_text li {
+    padding: 0 !important;
+    list-style: inherit !important;
+}
+
+.comment_text ul {
+    list-style: disc !important;
+    padding-left: 20px !important;
+}
+
+.comment_text ol {
+    list-style: decimal !important;
+    padding-left: 20px !important;
+}
+
+.wp-caption.aligncenter {
+    width: 100% !important;
+    text-align: center;
+}
+
+.search-custom form {
+    width: 70% !important;
+    padding-top: 20px;
+}
+
+.search-custom form.search-form:after {
+    top: 20px;
+}
+
+.wp-caption-text, .gallery-caption, .bypostauthor, .sticky {
+    color: #777;
+}
+
+form.post-password-form input[type=submit] {
+    padding: 1px 5px;
+    background: #000;
+    color: #fff;
+    border-color: #000;
+    width: auto;
+}
+
+.screen-reader-text {
+    display: none;
+}
+
+.widget ul li {
+    list-style: none !important;
+}
+
+.widget ul {
+    padding-left: 0px !important;
+}
+
+.widget ul.sub-menu, .widget ul.children {
+    padding-left: 10px !important;
+}
+
+.widget ul.sub-menu li, .widget ul.children li {
+    padding-bottom: 3px !important;
+}
+
+ul.children {
+    margin-left: 80px;
+}
+
+/*add */
+span.featured-post {
+    color: #333;
+    font-weight: bold !important;
+    margin-right: 5px;
+    float: right;
+}
+
+.wp-tag-cloud li {
+    display: inline-block;
+    margin: 0 7px 6px;
+}
+
+.wp-tag-cloud li:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.wp-tag-cloud li a {
+    display: block;
+    background: #e7e7e7;
+    font-size: 13px !important;
+    color: #333;
+    padding: 8px 13px;
+    position: relative;
+}
+
+.wp-tag-cloud li:hover a {
+    color: #fff;
+    background: #e32222;
+}
+
+.wp-tag-cloud li a::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-style: solid;
+    border-width: 0 0 35px 10px;
+    border-color: transparent transparent #e7e7e7 transparent;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.wp-tag-cloud li a:hover::before {
+    border-color: transparent transparent #e32222 transparent;
+}
+
+.wp-tag-cloud li a::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-style: solid;
+    border-width: 0 0 35px 10px;
+    border-color: transparent transparent transparent #e7e7e7;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.wp-tag-cloud li a:hover::after {
+    border-color: transparent transparent transparent #e32222;
+}
+
+p.logged-in-as {
+    padding: 5px 0px;
+    color: #333;
+}
+
+p.logged-in-as a {
+    color: #888;
+}
+
+h3.archive-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.wrap-blog ul.children {
+    padding-left: 10px;
+}
+
+.single-content h1 {
+    font-size: 46px;
+}
+
+.single-content h2 {
+    font-size: 34px;
+}
+
+.single-content h3 {
+    font-size: 26px;
+}
+
+.single-content h4 {
+    font-size: 22px;
+}
+
+.single-content h5 {
+    font-size: 20px;
+}
+
+.single-content h6 {
+    font-size: 16px;
+}
+
+.comment_text h1 {
+    font-size: 46px;
+}
+
+.comment_text h2 {
+    font-size: 34px;
+}
+
+.comment_text h3 {
+    font-size: 26px;
+}
+
+.comment_text h4 {
+    font-size: 22px;
+}
+
+.comment_text h5 {
+    font-size: 20px;
+}
+
+.comment_text h6 {
+    font-size: 16px;
+}
+
+/******/
+
+h3.comment-reply-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #4f405e;
+    text-transform: capitalize;
+}
+
+.comment-avatar-info h5 span {
+    color: #333;
+    font-size: 14px;
+}
+
+.comment-reply-link {
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.comment-avatar-info h5 {
+    text-transform: capitalize;
+}
+
+.comment-form-cookies-consent {
+    display: none;
+}
+
+.comment-form .form-submit .btn {
+    background: var(--global-primary) none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 18px 40px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transition: all 0.4s ease-in-out;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-top: 10px;
+    border-radius: 0px;
+    padding: 18px 40px;
+    width: inherit;
+}
+
+.comment-form .form-submit .btn:hover {
+    box-shadow: none;
+    color: #fff;
+    background: #5613c3;
+}
+
+.single-widget.widget_categories, .single-widget.widget_tag_cloud {
+    background: #f4f4f4;
+    padding: 25px;
+}
+
+.single-widget.widget_categories h3, .single-widget.widget_tag_cloud h3 {
+    font-size: 18px;
+    color: #4f405e;
+    margin-bottom: 0;
+    position: relative;
+    line-height: 1;
+    background: #fff;
+    padding: 30px 25px;
+    padding-left: 45px;
+}
+
+.single-widget.widget_categories h3::before, .single-widget.widget_tag_cloud h3::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    top: 30px;
+    height: 20px;
+    width: 2px;
+    background: #e75454;
+}
+
+.single-widget.widget_categories h3::after, .single-widget.widget_tag_cloud h3::after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 27px;
+    height: 20px;
+    width: 2px;
+    background: #e75454;
+}
+
+.single-widget.widget_categories ul, .single-widget.widget_tag_cloud ul {
+    padding: 30px 25px;
+    background: #fff;
+    padding-top: 0px;
+}
+
+.single-widget.widget_categories ul li {
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #d6d6d6;
+    text-align: right;
+}
+
+.single-widget.widget_categories ul li:last-child {
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.single-widget.widget_categories ul li a {
+    color: #333;
+    display: block;
+    float: left;
+}
+
+.single-widget.widget_categories ul li a:hover {
+    color: #e32222;
+}
+
+.b-details-inner-title {
+    font-size: 22px;
+}
+
+.logged-in .transparent-header {
+    top: 82px;
+}
+
+.logged-in .transparent-header.sticky-menu {
+    top: 32px;
+}
+
+.transparent-header {
+    top: 0px;
+}
+
+.newsletter-form input[type="submit"] {
+    background: var(--global-primary) none repeat scroll 0 0;
+    width: inherit;
+    padding: 18px 40px;
+    border-radius: 0;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 17px 30px;
+    position: absolute;
+    right: 0px;
+    color: #fff;
+    top: 0px;
+}
+
+.newsletter-form .your-email input[type="email"] {
+    margin-right: 130px;
+}
+
+.newsletter-form input[type="submit"]:hover {
+    background: #5613c3;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    display: none !important;
+}
+
+form.failed .your-email input[type="email"] {
+    margin-right: 0px;
+
+}
+
+form.failed .your-email {
+    top: -47px;
+}
+
+div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
+    margin-top: 65px;
+}
+
+
+.footer-form form input[type="submit"] {
+    padding: 14px 40px;
+    border-radius: 3px;
+    width: inherit;
+    font-size: 14px;
+}
+
+.footer-form div.wpcf7-mail-sent-ng, .footer-form div.wpcf7-aborted {
+    color: #fff;
+}
+
+.search-custom h4 {
+    color: #4f405e;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.search-custom form input[type="text"] {
+    padding: 8px;
+    padding-left: 10px;
+    width: 100%;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .logged-in .transparent-header {
+        top: 100px;
+    }
+
+    .footer-form .wpcf7-form-control-wrap input,
+    .footer-form .wpcf7-form-control-wrap textarea {
+        width: 300px;
+    }
+
+    form.woocommerce-checkout .your-order {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .search-custom form button {
+        position: absolute;
+        top: 113px;
+        transform: translateY(-50%);
+        right: 285px;
+        border: none;
+        padding: 0;
+        background: none;
+        color: #e32222;
+        cursor: pointer;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 991px) {
+    .search-custom form button {
+        position: absolute;
+        top: 145px;
+        transform: translateY(-50%);
+        right: 170px;
+        border: none;
+        padding: 0;
+        background: none;
+        color: #e32222;
+        cursor: pointer;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .newsletter-form .your-email input[type="email"] {
+        margin-right: 0px;
+    }
+}
+
+.page-404 {
+    padding: 120px 0;
+}
+
+.page-404 h2 {
+    font-size: 120px;
+    font-weight: 500;
+}
+
+.page-404 h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.page-404 div.text {
+    font-size: 20px;
+    font-weight: 400;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.page-404 .btn-primary {
+    background: var(--global-primary);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 0;
+    height: 70px;
+    padding: 0 16px;
+    cursor: pointer;
+    width: 300px;
+    line-height: 70px;
+}
+
+.page-404 .btn-primary:hover {
+    background: #5613c3;
+}
+
+span.current {
+	display: none;
+    position: relative;
+    padding: 0;
+    margin-left: 0;
+    line-height: 48px;
+    font-weight: 600;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    border-color: var(--global-primary);
+    background: var(--global-primary);
+    color: #fff;
+}
+
+.blog-details-tag a, .blog-list-meta .blog-details-tag i,
+.rc-post-content span, .blog-details-date li, .blog-details-date li a {
+    color: #4f405e;
+}
+
+a[rel="author"] {
+    text-transform: capitalize;
+}
+
+.blog-list-content h2 {
+    margin-bottom: 10px;
+}
+
+p.logged-in-as a, .blog-list-meta ul li.blog-post-date {
+    color: #4f405e;
+}
+
+.footer-text p, .footer-social ul li a, .f-rc-content span,
+.f-rc-content h5, .fw-link ul li a, .copyright-text p {
+    color: #fff;
+}
+
+.fw-title h5 {
+    opacity: 1;
+}
+
+.blog-list-meta ul li.blog-more-read a {
+    font-weight: 500;
+}
+
+.phone-call {
+    top: -20px;
+}
+
+.f-rc-post .f-rc-thumb {
+    margin-top: -15px;
+}
+
+.f-rc-content p {
+    color: #fff;
+    opacity: 0.8
+}
+
+.f-rc-post ul li {
+    padding-bottom: 0px;
+}
+
+.blog-page p {
+    margin-bottom: 20px;
+}
+
+.rc-post ul li {
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #999;
+}
+
+.rc-post ul li:last-child {
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+
+.blog-details-content .blog-list-meta {
+    margin-top: 40px;
+}
+
+.single-features .features-icon img {
+    width: 59px;
+}
+
+.single-delivery-services .ds-icon img {
+    max-width: inherit;
+}
+
+.fact-area .row > div:nth-child(4) img {
+    height: 49px;
+}
+
+.pricing-head .pricing-icon img {
+    width: 52px;
+}
+
+.doctor-thumb img {
+    border-radius: 50% !important;
+    border: 3px solid #fff !important;
+}
+
+.single-product img {
+    width: auto;
+}
+
+.product-large-img .thumbnails a img {
+    width: 25%;
+    margin-top: 20px;
+}
+
+.product-details-content div[itemprop="offers"] h6.price {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--global-primary);
+    margin-bottom: 30px;
+}
+
+.woocommerce .quantity .qty {
+    /*width: auto;*/
+    padding: 11px 0;
+}
+
+.product-details-content .inc.qtybutton {
+    left: 170px;
+}
+
+
+.product-details-content .cart-plus-minus::after {
+    left: 165px;
+}
+
+.product-details-content form.cart {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed #d7d7d7;
+    margin-bottom: 25px;
+}
+
+.product-details-content form.cart .cart-plus-minus {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+button.single_add_to_cart_button {
+    background-color: var(--global-primary) !important;
+    border: medium none !important;
+    border-radius: 0px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0;
+    line-height: 1 !important;
+    margin-bottom: 0 !important;
+    padding: 18px 40px !important;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transition: all 0.4s ease-in-out;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+button.single_add_to_cart_button:hover {
+    background: #5613c3 !important;
+}
+
+.product-info ul li {
+    font-weight: 600;
+}
+
+.product-desc-wrap .nav-tabs .nav-link {
+    font-size: 17px;
+    font-weight: 700;
+    color: #545353;
+    text-transform: uppercase;
+}
+
+#myTabContent .tab-pane .event-text h2 {
+    display: none;
+}
+
+.woocommerce #review_form #respond .form-submit input {
+    width: auto;
+    background-color: var(--global-primary) !important;
+    border: medium none !important;
+    border-radius: 0px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0;
+    line-height: 1 !important;
+    margin-bottom: 0 !important;
+    padding: 18px 40px !important;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transition: all 0.4s ease-in-out;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.woocommerce p.stars a:before {
+    color: var(--global-primary);
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+    width: auto;
+}
+
+.woocommerce #reviews.woocommerce-Reviews #comments .commentlist .comment .comment_container .comment-text {
+    margin: 0 0 0 80px;
+}
+
+.comment_container .comment-text {
+    padding: 5px 15px 0 !important;
+}
+
+.woocommerce #reviews #comments ol.commentlist {
+    padding-left: 0px;
+}
+
+p.meta strong[itemprop="author"] {
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+p.meta time[itemprop="datePublished"] {
+    font-size: 14px;
+}
+
+.comment_container .comment-text .star-rating {
+    margin-top: 5px;
+}
+
+.woocommerce .woocommerce-Reviews .comment-text .star-rating span {
+    color: var(--global-primary);
+}
+
+.woocommerce-product-rating {
+    margin-bottom: 40px;
+}
+
+.woocommerce .star-rating:before, .woocommerce .star-rating span {
+    color: var(--global-primary);
+}
+
+.woocommerce-review-link {
+    color: #75668f;
+    font-weight: 500;
+}
+
+.comment-form-rating label {
+    color: #75668f;
+    margin-top: 5px
+}
+
+.comment-form-comment label {
+    color: #75668f;
+}
+
+.pt-230 {
+    padding-top: 230px;
+}
+
+.breadcrumb-area .breadcrumb-text h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.shop-banner-area .product .product__img {
+    text-align: center;
+}
+
+.product-showing p {
+    margin: 0;
+    border: 2px solid #eaedff;
+    padding: 17px 30px;
+    text-align: center;
+    line-height: 1;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-left: 35px !important;
+}
+
+.pro-filter select {
+    width: 220px;
+    margin: 0;
+    border: 2px solid #eaedff;
+    padding: 17px 30px;
+    text-align: center;
+    line-height: 1;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-right: 35px;
+}
+
+.shop-banner-area > .container {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.shop-banner-area .product_content h4.pro-title a {
+    color: var(--global-primary);
+}
+
+.shop-banner-area .product_content h4.pro-title a:hover {
+    color: var(--global-primary);
+}
+
+.shop-banner-area .product_content div.price span.price span {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.shop-banner-area .product_content div.preview {
+    margin-top: 10px
+}
+
+.shop-banner-area .product_content div.preview a {
+    width: auto;
+    background-color: var(--global-primary) !important;
+    border: medium none !important;
+    border-radius: 0px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0;
+    line-height: 1 !important;
+    margin-bottom: 0 !important;
+    padding: 12px 25px !important;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transition: all 0.4s ease-in-out;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.shop-banner-area .product_content div.price div.star-rating {
+    display: none;
+}
+
+.table-content table th, .table-content table td {
+    border-bottom: 1px solid #eaedff;
+    border-right: 1px solid #eaedff;
+}
+
+.table-content table {
+    background: #ffffff;
+    border-color: #eaedff;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.cart-area table.table .cart-plus-minus input {
+    border: 2px solid #eaedff;
+    color: #333;
+}
+
+.cart-area table.table .cart-plus-minus::before,
+.cart-area table.table .cart-plus-minus::after {
+    display: none;
+}
+
+.cart-area table.table .cart-plus-minus .dec.qtybutton,
+.cart-area table.table .cart-plus-minus .inc.qtybutton {
+    display: none;
+}
+
+.table-content table td {
+    border-top: medium none;
+    padding: 20px 10px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.cart-area table.table td.product-name a {
+    color: var(--global-primary);
+    font-weight: 600;
+}
+
+.woocommerce a.remove {
+    margin: 0 auto;
+}
+
+.coupon {
+    float: left;
+}
+
+#coupon_code {
+    height: 50px;
+    border: 2px solid #eaedff;
+    padding: 0 15px;
+    margin-right: 10px;
+    margin-left: 45px;
+}
+
+input[name="update_cart"] {
+    float: right;
+    margin-right: 45px;
+}
+
+.cart-page-total {
+    padding-top: 50px;
+}
+
+.cart-page-total .cart_totals h2 {
+    color: #333;
+}
+
+.cart-page-total .cart_totals .wc-proceed-to-checkout a {
+    background: var(--global-primary);
+    margin-bottom: 0px;
+}
+
+.cart-page-total .cart_totals .wc-proceed-to-checkout a:hover {
+    background: #5613c3;
+}
+
+.elementor-widget-container .product-details-content ins {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--global-primary);
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.elementor-widget-container .product-details-content del {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--global-primary);
+    margin-right: 10px;
+}
+
+.elementor-widget-container .star-rating:before, .elementor-widget-container .star-rating span {
+    color: var(--global-primary);
+}
+
+.elementor-widget-container .star-rating {
+    float: left;
+}
+
+.elementor-widget-container .product-details-content .product-rating {
+    padding-top: 30px;
+}
+
+.elementor-widget-container .product-details-content form.cart {
+    margin-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+
+.elementor-widget-container .product-desc-wrap p {
+    margin-bottom: 0px;
+    color: #747373;
+}
+
+.elementor-widget-container .perched-info {
+    padding-bottom: 30px;
+}
+
+.elementor-widget-container .product-large-img .thumbnails a img {
+    width: 22%;
+    margin-right: 22px;
+}
+
+.elementor-widget-container .product-large-img .thumbnails a:last-child img {
+    margin-right: 0px;
+}
+
+.elementor-widget-container #review .comment-author-admin .comment_container {
+    display: flex;
+}
+
+.elementor-widget-container #review .comment-author-admin .comment_container img {
+    height: 100%;
+}
+
+.elementor-widget-container #review .comment-author-admin .comment_container .comment-text {
+    padding-top: 0px !important;
+}
+
+.elementor-widget-container #review .comment-author-admin .comment_container .comment-text strong {
+    color: #333;
+}
+
+.elementor-widget-container #review .comment-author-admin .comment_container .comment-text p {
+    color: #75668f;
+}
+
+.elementor-widget-container p.meta time[itemprop="datePublished"] {
+    color: var(--global-primary);
+    font-weight: 600;
+}
+
+.review-tab1 {
+    display: none;
+}
+
+.woocommerce-message {
+    display: none;
+}
+
+p.cart-empty {
+    text-align: center;
+    font-size: 24px;
+    color: #222;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+p.return-to-shop {
+    text-align: center;
+}
+
+p.return-to-shop a {
+    padding: 15px 25px !important;
+    color: #fff !important;
+    background-color: var(--global-primary) !important;
+    margin-bottom: 50px !important;
+}
+
+span.onsale {
+    top: -20px !important;
+    left: 30px !important;
+    width: 45px;
+    background-color: var(--global-primary) !important;
+    display: none;
+}
+
+.shop-banner-area .product_content div.price span.price del {
+    margin-right: 10px;
+}
+
+.shop-banner-area .product_content div.price span.price ins {
+    text-decoration: none;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+.checkbox-form .form-row input.input-text, .checkbox-form .form-row textarea {
+    background: #ffffff;
+    border: 1px solid #eaedff;
+    border-radius: 0;
+    height: 45px;
+    padding: 0 0 0 10px;
+    width: 100%;
+}
+
+.select2-container .select2-choice {
+    border: 1px solid #eaedff;
+}
+
+.select2-container a .select2-chosen {
+    height: 45px;
+    padding-left: 10px;
+    width: 100%;
+    color: #6f7172;
+    margin-right: 0px !important;
+    line-height: 45px;
+}
+
+.woocommerce form .form-row textarea#order_comments {
+    height: auto;
+}
+
+.order-notes textarea {
+    border: 1px solid #eaedff;
+    height: 90px;
+    padding: 15px;
+    width: 100%;
+}
+
+.woocommerce-checkout-payment .place-order input[name="woocommerce_checkout_place_order"] {
+    background: var(--global-primary);
+}
+
+.woocommerce-checkout-payment .place-order input[name="woocommerce_checkout_place_order"]:hover {
+    background: #5613c3;
+}
+
+.order-notes {
+    margin-top: 30px;
+}
+
+
+/*Cart Custom CSS*/
+/*.woocommerce .quantity .qty {*/
+/*    width: 100%;*/
+/*    padding: 11px 0;*/
+/*    text-align: center;*/
+/*    !*padding-left: 15px;*!*/
+/*}*/
+
+
+/*.qtybutton {*/
+/*    background-color: #C3AF92;*/
+/*    color: #fff;*/
+/*    width: 40px;*/
+/*    height: 46px;*/
+/*    left:0;*/
+/*    line-height: 46px;*/
+/*}*/
+/*.inc.qtybutton {*/
+/*    right: 0;*/
+/*}*/
+
+/*.cart-plus-minus input {*/
+/*    border: 2px solid #C3AF92;*/
+/*    color: #333;*/
+/*}*/
+/*.cart-plus-minus::before,*/
+/*.cart-plus-minus::after {*/
+/*    background: #C3AF92;*/
+/*}*/
+
+
+.woocommerce table.shop_table {
+    border: none;
+    width: 100%;
+}
+
+.product-name,
+.product-price,
+.product-quantity,
+.product-subtotal {
+    text-transform: uppercase;
+}
+
+.woocommerce .quantity .qty {
+    width: 60px;
+    padding: 11px 0;
+}
+
+.coupon .input-group {
+    height: 40px;
+}
+
+.coupon .button {
+    font-size: 14px !important;
+    width: auto !important;
+}
+.coupon .button:hover {
+    background-color: #C3AF92;
+    border-color: #C3AF92;
+    color: #fff;
+}
+
+/*Coupon input field*/
+#coupon_code {
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 4px 3px rgba(192, 175, 146, 0.8)
+}
+
+.woocommerce .actions .btn {
+    background-color: #C3AF92;
+    border-color: #C3AF92;
+    color: #fff;
+    font-family: "Roboto", Roboto, Sans-serif;
+    font-weight: normal !important;
+    text-transform: uppercase;
+    border: none;
+}
+.woocommerce .actions .btn:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+input[name="update_cart"] {
+    margin-right: 0;
+}
+
+
+/*Cart totals width control for mobile */
+.woocommerce .cart-collaterals .cart_totals, .woocommerce .cart-collaterals .cross-sells, .woocommerce .cart-collaterals .shipping_calculator, .woocommerce-page .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .shipping_calculator {
+    width: 100%;
+    float: none;
+    text-align: left;
+}
+
+.product-thumbnail {
+    display: block !important;
+}
+
+.product-thumbnail img {
+    height: 50px !important;
+    width: auto !important;
+}
+
+.product-thumbnail:before {
+    content: attr(data-title) "" !important;
+}
+
+.product-name {
+    display: none !important;
+}
+
+/*Checkout*/
+
+.woocommerce form .form-row label.checkbox,
+.woocommerce-page form .form-row label.checkbox{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    line-height: initial;
+    margin-left: 5px;
+}
+
+#place_order.button{
+    display:inline-block;
+    background-color: var(--e-global-color-primary);
+}
+
+#place_order.button:hover{
+
+    background-color: var(--e-global-color-text);
+}
+#place_order {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #000 !important;
+    font-size: 1.4em;
+}
+#place_order .alt {
+    background: #c0af92 !important;
+}
+
+
+@media (max-width: 576px) {
+
+    body.fr .coupon .input-group-append,
+    body.de .coupon .input-group-append {
+        display: block;
+        width: 100%;
+    }
+
+    body.fr .coupon .button,
+    body.de .coupon .button {
+        width: 100% !important;
+    }
+
+    body.fr .coupon .input-group,
+    body.de .coupon .input-group {
+        height: auto !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .coupon .button {
+        font-size: 100%;
+    }
+
+    #coupon_code {
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .product-thumbnail {
+        display: table-cell !important;
+    }
+
+    .product-name {
+        display: table-cell !important;
+    }
+
+    /*cart totals width on larger screen positioned right*/
+    .woocommerce .cart-collaterals .cart_totals, .woocommerce .cart-collaterals .cross-sells, .woocommerce .cart-collaterals .shipping_calculator, .woocommerce-page .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .shipping_calculator {
+        width: 40%%;
+        float: left;
+    }
+
+    .coupon .button {
+        font-size: 18px !important;
+    }
+
+}
+
+@media (min-width: 960px) {
+
+    .woocommerce-cart-form {
+        float: left;
+        width: 72%;
+        margin-right: 3%;
+    }
+
+    .woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals {
+        width: 25%;
+        float: left;
+    }
+
+    .product-thumbnail img {
+        height: auto !important;
+        width: auto !important;
+    }
+}
+
+
+/*@media (max-width: 767px) {*/
+    /*element.style {*/
+    /*    !* display: inline-block; *!*/
+    /*    font-size: 14px;*/
+    /*}*/
+/*}*/
+
+
+
+
+
+/*Buttons*/
+
+
+/*Proceed to checkout button*/
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+    background-color: var( --e-global-color-text );
+    border-radius: 5px 5px 5px 5px;
+    color: #fff;
+    font-size: 18px;
+    font-family: var( --e-global-typography-accent-font-family );
+    font-weight: var( --e-global-typography-accent-font-weight );
+    padding: 20px 40px;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover {
+    background-color: #C0AF92;
+}
+
+
+#langswitch {
+	cursor: pointer;
+}
+
+.twist-switch {
+    font-size: 10px;
+}
+
+.twist-switch .flag {
+	margin-top: -4px;
+}
+
+.twist-switch button {
+    border: 1px solid #ccc;
+    background: #fff !important;
+    color: #000;
+    border-radius: 5px;
+    height: 29px;
+    line-height: 0;
+    font-size: 10px !important;
+    font-weight: 400 !important;
+    min-width: 40px;
+    padding: 5px 5px 2px 5px;
+	margin-top: 2px;
+}
+.twist-switch .dropdown-menu {
+    z-index: 2000;
+}
+@media (min-width: 768px) {
+    .twist-switch .dropdown-menu {
+        min-width: 180px;
+    }
+}
+.twist-switch .dropdown-menu li {
+    width: 100%;
+    list-style: none;
+}
+.twist-switch .dropdown-menu li a {
+    font-weight: 500;
+    line-height: 1.428571429;
+    color: #333;
+    white-space: nowrap;
+}
+.twist-switch .switch-text {
+    margin-left: 10px;
+}
+.show {display:block!important;}
+
+@media (max-width: 768px)
+{
+    .show {
+        display: table!important;
+    }
+}
+
+span[class^='flag flag-'] {
+    background:url('/wp-content/uploads/flags.png') no-repeat;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 12px;
+    vertical-align: middle;
+}
+
+#langdropdown a:hover{
+	text-decoration: underline;
+}
+
+/* FLAGS */
+.flag.flag-ua {
+    background-position: -270px -156px
+}
+
+.flag.flag-py {
+    background-position: -90px -132px
+}
+
+.flag.flag-az {
+    background-position: -270px 0
+}
+
+.flag.flag-us {
+    background-position: -36px -168px
+}
+
+.flag.flag-pf {
+    background-position: -180px -120px
+}
+
+.flag.flag-pm {
+    background-position: -270px -120px
+}
+
+.flag.flag-ge {
+    background-position: -198px -48px
+}
+
+.flag.flag-gi {
+    background-position: -270px -48px
+}
+
+.flag.flag-mm {
+    background-position: -234px -96px
+}
+
+.flag.flag-kg {
+    background-position: -270px -72px
+}
+
+.flag.flag-kn {
+    background-position: -54px -84px
+}
+
+.flag.flag-mu {
+    background-position: -90px -108px
+}
+
+.flag.flag-ec {
+    background-position: -180px -36px
+}
+
+.flag.flag-hk {
+    background-position: -198px -60px
+}
+
+.flag.flag-io {
+    background-position: -90px -72px
+}
+
+.flag.flag-bo {
+    background-position: -216px -12px
+}
+
+.flag.flag-ck {
+    background-position: -180px -24px
+}
+
+.flag.flag-ht {
+    background-position: -270px -60px
+}
+
+.flag.flag-gf {
+    background-position: -216px -48px
+}
+
+.flag.flag-iq {
+    background-position: -108px -72px
+}
+
+.flag.flag-jo {
+    background-position: -216px -72px
+}
+
+.flag.flag-um {
+    background-position: -18px -168px
+}
+
+.flag.flag-eu {
+    background-position: -18px -48px
+}
+
+.flag.flag-mn {
+    background-position: -252px -96px
+}
+
+.flag.flag-ad {
+    background-position: 0 0
+}
+
+.flag.flag-tg {
+    background-position: -36px -156px
+}
+
+.flag.flag-tl {
+    background-position: -108px -156px
+}
+
+.flag.flag-ch {
+    background-position: -144px -24px
+}
+
+.flag.flag-pk {
+    background-position: -234px -120px
+}
+
+.flag.flag-ru {
+    background-position: -180px -132px
+}
+
+.flag.flag-gh {
+    background-position: -252px -48px
+}
+
+.flag.flag-gq {
+    background-position: -72px -60px
+}
+
+.flag.flag-me {
+    background-position: -126px -96px
+}
+
+.flag.flag-kp {
+    background-position: -72px -84px
+}
+
+.flag.flag-tr {
+    background-position: -180px -156px
+}
+
+.flag.flag-lr {
+    background-position: -252px -84px
+}
+
+.flag.flag-ba {
+    background-position: 0 -12px
+}
+
+.flag.flag-cl {
+    background-position: -198px -24px
+}
+
+.flag.flag-sj {
+    background-position: -72px -144px
+}
+
+.flag.flag-ki {
+    background-position: -18px -84px
+}
+
+.flag.flag-sm {
+    background-position: -126px -144px
+}
+
+.flag.flag-sk {
+    background-position: -90px -144px
+}
+
+.flag.flag-argentina {
+    background-position: -162px 0
+}
+
+.flag.flag-sz {
+    background-position: -252px -144px
+}
+
+.flag.flag-dm {
+    background-position: -126px -36px
+}
+
+.flag.flag-ao {
+    background-position: -144px 0
+}
+
+.flag.flag-ng {
+    background-position: -270px -108px
+}
+
+.flag.flag-fr {
+    background-position: -126px -48px
+}
+
+.flag.flag-lv {
+    background-position: -36px -96px
+}
+
+.flag.flag-pn {
+    background-position: 0 -132px
+}
+
+.flag.flag-cd {
+    background-position: -90px -24px
+}
+
+.flag.flag-cu {
+    background-position: 0 -36px
+}
+
+.flag.flag-nc {
+    background-position: -216px -108px
+}
+
+.flag.flag-mv {
+    background-position: -108px -108px
+}
+
+.flag.flag-tz {
+    background-position: -252px -156px
+}
+
+.flag.flag-mw {
+    background-position: -126px -108px
+}
+
+.flag.flag-tf {
+    background-position: -18px -156px
+}
+
+.flag.flag-nr {
+    background-position: -72px -120px
+}
+
+.flag.flag-ws {
+    background-position: -234px -168px
+}
+
+.flag.flag-kr {
+    background-position: -90px -84px
+}
+
+.flag.flag-sd {
+    background-position: -270px -132px
+}
+
+.flag.flag-mo {
+    background-position: -270px -96px
+}
+
+.flag.flag-rs {
+    background-position: -162px -132px
+}
+
+.flag.flag-er {
+    background-position: -252px -36px
+}
+
+.flag.flag-fo {
+    background-position: -108px -48px
+}
+
+.flag.flag-mz {
+    background-position: -180px -108px
+}
+
+.flag.flag-al {
+    background-position: -90px 0
+}
+
+.flag.flag-bg {
+    background-position: -90px -12px
+}
+
+.flag.flag-ae {
+    background-position: -18px 0
+}
+
+.flag.flag-mp {
+    background-position: 0 -108px
+}
+
+.flag.flag-tj {
+    background-position: -72px -156px
+}
+
+.flag.flag-bj {
+    background-position: -144px -12px
+}
+
+.flag.flag-gw {
+    background-position: -162px -60px
+}
+
+.flag.flag-cy {
+    background-position: -36px -36px
+}
+
+.flag.flag-ai {
+    background-position: -72px 0
+}
+
+.flag.flag-jm {
+    background-position: -198px -72px
+}
+
+.flag.flag-an {
+    background-position: -126px 0
+}
+
+.flag.flag-et {
+    background-position: 0 -48px
+}
+
+.flag.flag-mr {
+    background-position: -36px -108px
+}
+
+.flag.flag-gn {
+    background-position: -36px -60px
+}
+
+.flag.flag-pw {
+    background-position: -72px -132px
+}
+
+.flag.flag-si {
+    background-position: -54px -144px
+}
+
+.flag.flag-tn {
+    background-position: -144px -156px
+}
+
+.flag.flag-pt {
+    background-position: -54px -132px
+}
+
+.flag.flag-gt {
+    background-position: -126px -60px
+}
+
+.flag.flag-ni {
+    background-position: 0 -120px
+}
+
+.flag.flag-mg {
+    background-position: -162px -96px
+}
+
+.flag.flag-ms {
+    background-position: -54px -108px
+}
+
+.flag.flag-nz {
+    background-position: -108px -120px
+}
+
+.flag.flag-vu {
+    background-position: -198px -168px
+}
+
+.flag.flag-yt {
+    background-position: -270px -168px
+}
+
+.flag.flag-th {
+    background-position: -54px -156px
+}
+
+.flag.flag-sc {
+    background-position: -252px -132px
+}
+
+.flag.flag-mk {
+    background-position: -198px -96px
+}
+
+.flag.flag-can {
+    background-position: -72px -24px
+}
+
+.flag.flag-ci {
+    background-position: -162px -24px
+}
+
+.flag.flag-je {
+    background-position: -180px -72px
+}
+
+.flag.flag-ph {
+    background-position: -216px -120px
+}
+
+.flag.flag-na {
+    background-position: -198px -108px
+}
+
+.flag.flag-za {
+    background-position: 0 -180px
+}
+
+.flag.flag-de {
+    background-position: -72px -36px
+}
+
+.flag.flag-sl {
+    background-position: -108px -144px
+}
+
+.flag.flag-br {
+    background-position: -234px -12px
+}
+
+.flag.flag-as {
+    background-position: -180px 0
+}
+
+.flag.flag-cf {
+    background-position: -108px -24px
+}
+
+.flag.flag-zm {
+    background-position: -18px -180px
+}
+
+.flag.flag-km {
+    background-position: -36px -84px
+}
+
+.flag.flag-tc {
+    background-position: -270px -144px
+}
+
+.flag.flag-bf {
+    background-position: -72px -12px
+}
+
+.flag.flag-ml {
+    background-position: -216px -96px
+}
+
+.flag.flag-va {
+    background-position: -90px -168px
+}
+
+.flag.flag-np {
+    background-position: -54px -120px
+}
+
+.flag.flag-bs {
+    background-position: -252px -12px
+}
+
+.flag.flag-fj {
+    background-position: -54px -48px
+}
+
+.flag.flag-lu {
+    background-position: -18px -96px
+}
+
+.flag.flag-ly {
+    background-position: -54px -96px
+}
+
+.flag.flag-do {
+    background-position: -144px -36px
+}
+
+.flag.flag-bl {
+    background-position: -162px -12px
+}
+
+.flag.flag-id {
+    background-position: -18px -72px
+}
+
+.flag.flag-vc {
+    background-position: -108px -168px
+}
+
+.flag.flag-hr {
+    background-position: -252px -60px
+}
+
+.flag.flag-ps {
+    background-position: -36px -132px
+}
+
+.flag.flag-am {
+    background-position: -108px 0
+}
+
+.flag.flag-ne {
+    background-position: -234px -108px
+}
+
+.flag.flag-eg {
+    background-position: -216px -36px
+}
+
+.flag.flag-uy {
+    background-position: -54px -168px
+}
+
+.flag.flag-mh {
+    background-position: -180px -96px
+}
+
+.flag.flag-kw {
+    background-position: -108px -84px
+}
+
+.flag.flag-nu {
+    background-position: -90px -120px
+}
+
+.flag.flag-gu {
+    background-position: -144px -60px
+}
+
+.flag.flag-sg {
+    background-position: -18px -144px
+}
+
+.flag.flag-mt {
+    background-position: -72px -108px
+}
+
+.flag.flag-co {
+    background-position: -252px -24px
+}
+
+.flag.flag-tk {
+    background-position: -90px -156px
+}
+
+.flag.flag-to {
+    background-position: -162px -156px
+}
+
+.flag.flag-ir {
+    background-position: -126px -72px
+}
+
+.flag.flag-om {
+    background-position: -126px -120px
+}
+
+.flag.flag-mf {
+    background-position: -144px -96px
+}
+
+.flag.flag-mx {
+    background-position: -144px -108px
+}
+
+.flag.flag-ve {
+    background-position: -126px -168px
+}
+
+.flag.flag-cg {
+    background-position: -126px -24px
+}
+
+.flag.flag-sy {
+    background-position: -234px -144px
+}
+
+.flag.flag-nf {
+    background-position: -252px -108px
+}
+
+.flag.flag-zw {
+    background-position: -36px -180px
+}
+
+.flag.flag-tt {
+    background-position: -198px -156px
+}
+
+.flag.flag-gm {
+    background-position: -18px -60px
+}
+
+.flag.flag-vg {
+    background-position: -144px -168px
+}
+
+.flag.flag-af {
+    background-position: -36px 0
+}
+
+.flag.flag-ag {
+    background-position: -54px 0
+}
+
+.flag.flag-gs {
+    background-position: -108px -60px
+}
+
+.flag.flag-ls {
+    background-position: -270px -84px
+}
+
+.flag.flag-no {
+    background-position: -36px -120px
+}
+
+.flag.flag-sh {
+    background-position: -36px -144px
+}
+
+.flag.flag-pa {
+    background-position: -144px -120px
+}
+
+.flag.flag-sn {
+    background-position: -144px -144px
+}
+
+.flag.flag-au {
+    background-position: -216px 0
+}
+
+.flag.flag-bt {
+    background-position: -270px -12px
+}
+
+.flag.flag-ye {
+    background-position: -252px -168px
+}
+
+.flag.flag-mc {
+    background-position: -90px -96px
+}
+
+.flag.flag-hn {
+    background-position: -234px -60px
+}
+
+.flag.flag-is {
+    background-position: -144px -72px
+}
+
+.flag.flag-la {
+    background-position: -162px -84px
+}
+
+.flag.flag-tv {
+    background-position: -216px -156px
+}
+
+.flag.flag-lk {
+    background-position: -234px -84px
+}
+
+.flag.flag-ee {
+    background-position: -198px -36px
+}
+
+.flag.flag-bi {
+    background-position: -126px -12px
+}
+
+.flag.flag-lb {
+    background-position: -180px -84px
+}
+
+.flag.flag-vn {
+    background-position: -180px -168px
+}
+
+.flag.flag-eh {
+    background-position: -234px -36px
+}
+
+.flag.flag-rw {
+    background-position: -198px -132px
+}
+
+.flag.flag-ie {
+    background-position: -36px -72px
+}
+
+.flag.flag-bm {
+    background-position: -180px -12px
+}
+
+.flag.flag-ma {
+    background-position: -72px -96px
+}
+
+.flag.flag-dz {
+    background-position: -162px -36px
+}
+
+.flag.flag-cr {
+    background-position: -270px -24px
+}
+
+.flag.flag-da {
+    background-position: -108px -36px
+}
+
+.flag.flag-sb {
+    background-position: -234px -132px
+}
+
+.flag.flag-jp {
+    background-position: -234px -72px
+}
+
+.flag.flag-td {
+    background-position: 0 -156px
+}
+
+.flag.flag-ro {
+    background-position: -144px -132px
+}
+
+.flag.flag-tm {
+    background-position: -126px -156px
+}
+
+.flag.flag-my {
+    background-position: -162px -108px
+}
+
+.flag.flag-ax {
+    background-position: -252px 0
+}
+
+.flag.flag-gp {
+    background-position: -54px -60px
+}
+
+.flag.flag-nl {
+    background-position: -18px -120px
+}
+
+.flag.flag-gg {
+    background-position: -234px -48px
+}
+
+.flag.flag-bb {
+    background-position: -18px -12px
+}
+
+.flag.flag-ug {
+    background-position: 0 -168px
+}
+
+.flag.flag-fm {
+    background-position: -90px -48px
+}
+
+.flag.flag-gy {
+    background-position: -180px -60px
+}
+
+.flag.flag-pg {
+    background-position: -198px -120px
+}
+
+.flag.flag-bz {
+    background-position: -54px -24px
+}
+
+.flag.flag-bh {
+    background-position: -108px -12px
+}
+
+.flag.flag-pe {
+    background-position: -162px -120px
+}
+
+.flag.flag-ky {
+    background-position: -126px -84px
+}
+
+.flag.flag-tw {
+    background-position: -234px -156px
+}
+
+.flag.flag-es {
+    background-position: -270px -36px
+}
+
+.flag.flag-kh {
+    background-position: 0 -84px
+}
+
+.flag.flag-lt {
+    background-position: 0 -96px
+}
+
+.flag.flag-bv {
+    background-position: 0 -24px
+}
+
+.flag.flag-mq {
+    background-position: -18px -108px
+}
+
+.flag.flag-ar {
+    background-position: -216px -132px
+}
+
+.flag.flag-so {
+    background-position: -162px -144px
+}
+
+.flag.flag-qa {
+    background-position: -108px -132px
+}
+
+.flag.flag-bw {
+    background-position: -18px -24px
+}
+
+.flag.flag-pl {
+    background-position: -252px -120px
+}
+
+.flag.flag-hm {
+    background-position: -216px -60px
+}
+
+.flag.flag-ga {
+	background-position: -36px -72px
+}
+
+.flag.flag-kz {
+    background-position: -144px -84px
+}
+
+.flag.flag-fi {
+    background-position: -36px -48px
+}
+
+.flag.flag-zh-hans {
+    background-position: -234px -24px
+}
+
+.flag.flag-pr {
+    background-position: -18px -132px
+}
+
+.flag.flag-cm {
+    background-position: -216px -24px
+}
+
+.flag.flag-aw {
+    background-position: -234px 0
+}
+
+.flag.flag-bn {
+    background-position: -198px -12px
+}
+
+.flag.flag-be {
+    background-position: -54px -12px
+}
+
+.flag.flag-cv {
+    background-position: -18px -36px
+}
+
+.flag.flag-il {
+    background-position: -54px -72px
+}
+
+.flag.flag-dj {
+    background-position: -90px -36px
+}
+
+.flag.flag-at {
+    background-position: -198px 0
+}
+
+.flag.flag-gb {
+    background-position: -162px -48px
+}
+
+.flag.flag-en {
+    background-position: -162px -48px
+}
+
+.flag.flag-sv {
+    background-position: 0 -144px
+}
+
+.flag.flag-re {
+    background-position: -126px -132px
+}
+
+.flag.flag-gd {
+    background-position: -180px -48px
+}
+
+.flag.flag-uz {
+    background-position: -72px -168px
+}
+
+.flag.flag-md {
+    background-position: -108px -96px
+}
+
+.flag.flag-by {
+    background-position: -36px -24px
+}
+
+.flag.flag-wf {
+    background-position: -216px -168px
+}
+
+.flag.flag-vi {
+    background-position: -162px -168px
+}
+
+.flag.flag-it {
+    background-position: -162px -72px
+}
+
+.flag.flag-ke {
+    background-position: -252px -72px
+}
+
+.flag.flag-gl {
+    background-position: 0 -60px
+}
+
+.flag.flag-cz {
+    background-position: -54px -36px
+}
+
+.flag.flag-sr {
+    background-position: -180px -144px
+}
+
+.flag.flag-li {
+    background-position: -216px -84px
+}
+
+.flag.flag-in {
+    background-position: -72px -72px
+}
+
+.flag.flag-bd {
+    background-position: -36px -12px
+}
+
+.flag.flag-fk {
+    background-position: -72px -48px
+}
+
+.flag.flag-lc {
+    background-position: -198px -84px
+}
+
+.flag.flag-el {
+    background-position: -90px -60px
+}
+
+.flag.flag-st {
+    background-position: -198px -144px
+}
+
+.flag.flag-hu {
+    background-position: 0 -72px
+}
+
+.grecaptcha-badge { 
+    visibility: hidden;
+}
+
+#scrollUp {
+	display: none !important;
+}
+
+.elementor-element-687ef512{
+	position: fixed;
+	z-index: 99 !important;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    top: 0;
+}
+
+#lang-currency-switcher {
+	visibility: hidden;
+	z-index: 99 !important;
+}

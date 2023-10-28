@@ -1,0 +1,230 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+/* The Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 800px;
+    min-height: 200px;
+}
+
+.modal-content .item-count {
+    max-width: 51px;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.modal-content input::-webkit-outer-spin-button,
+.modal-content input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+}
+
+.modal-content td {
+    vertical-align: middle;
+}
+
+.modal-content .input-group, .modal-content .cart-thumbnail {
+    text-align: center;
+}
+
+.modal-content .cart-table {
+    overflow-x: auto;
+}
+
+.modal-content .cart-thumbnail img {
+    width: 64px;
+}
+
+.cart-table .delete-item {
+    font-size: 10px;
+    padding: 2px 5px 2px 5px;
+    border: none !important;
+    background: transparent !important;
+    line-height: 19px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.showCart:hover {
+    cursor: pointer;
+}
+
+.item-price, .item-total-td {
+    font-size: 17px; 
+
+}
+
+.item-total-td {
+    text-align: right;
+}
+
+.item-price s, .item-total-td s {
+    display: block;
+    font-size: 14px; 
+}
+
+.cart-sale {
+    font-size: 10px;
+    border: dashed 2px;
+    border-radius: 3px;
+    font-weight: 700;
+    width: fit-content;
+    color: #ff326d;
+    padding: 2px 5px 2px 5px;
+    margin: 5px 0px 0px 0px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-cart-counter-top .cart-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    position: absolute;
+    min-width: 1.6em;
+    min-height: 1.6em;
+    line-height: 1;
+    top: -0.7em;
+    right: -0.7em;
+    border-radius: 100%;
+    color: #fff;
+    background-color: #d9534f;
+    text-align: center;
+    font-size: 10px;
+}
+
+.new-checkout-button, .new-checkout-shopify-button { 
+display: block; 
+}
+
+.tracking-wrapper label { 
+padding-top: 15px; 
+}
+
+.modal .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 20px;
+    display: none;
+    font-size: 16px;
+}
+
+.modal .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal .closebtn:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 480px) {
+    .button-wrap a {
+        display: inline-block;
+    }
+    .modal-content .cart-thumbnail img {
+        width: 32px;
+        max-width: none;
+    }
+
+    .continue-shopping {
+        margin-bottom: 10px;
+    }
+
+    .modal {
+        padding-top: 0px;
+    }
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: inline-block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none !important;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    td:nth-of-type(1) {
+        min-width: 30%;
+    }
+    td:nth-of-type(2) {
+        width: 70%;
+    }
+    td:nth-of-type(3) {
+        min-width: 29%;
+    }
+    td:nth-of-type(4) {
+        min-width: 54.8%;
+    }
+    td:nth-of-type(5) {
+        min-width: 15%;
+    }
+    td:nth-of-type(6) {
+        min-width: 100%;
+    }
+}
